@@ -28,7 +28,6 @@ background color filter button active #2196F3;
 }
 
 body {
-  width: 1600px;
   font-family: 'Roboto', 'Raleway', sans-serif;
   color: var(--main-color);
   background-color: var(--background-color-main);
