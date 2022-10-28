@@ -11,7 +11,6 @@
   --background-hero-and-footer: #2f303a;
   --portfolio-card-border-color: #eeeeee;
   --team-member-card-shadow-color: hsla(0, 0%, 0%, 0.25);
-
 }
 
 body {
@@ -26,9 +25,19 @@ body {
   padding-left: 15px;
 }
 
-section:not(:last-child) {
-  margin-bottom: 94px;
+section:not(.hero) {
+  padding-bottom: 94px;
+  padding-top: 94px;
 }
+
+section.features {
+  padding-bottom: 0;
+}
+
+
+/* section:not(:last-child) {
+  margin-bottom: 94px;
+} */
 
 /* !!! HEADER !!! */
 /* logo */
@@ -200,7 +209,7 @@ section:not(:last-child) {
 }
 
 /* Feature section */
-.features {
+.features-list {
   list-style: none;
   margin-top: 0;
   margin-bottom: 0;
@@ -257,8 +266,8 @@ section:not(:last-child) {
 /* Our team section */
 .our-team {
   background-color: var(--background-color-second);
-  padding-top: 94px;
-  padding-bottom: 94px;
+  /* padding-top: 94px;
+  padding-bottom: 94px; */
 }
 
 .team-member-card {
