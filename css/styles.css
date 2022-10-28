@@ -1,3 +1,4 @@
+/* Colors */
 :root {
   --main-color: #757575;
   --second-color: #212121;
@@ -25,22 +26,18 @@ body {
   padding-left: 15px;
 }
 
+/* Paddings for all sections except Hero */
 section:not(.hero) {
   padding-bottom: 94px;
   padding-top: 94px;
 }
 
+/* Zero bottom padding for feature section - overflows previous padding */
 section.features {
   padding-bottom: 0;
 }
 
-
-/* section:not(:last-child) {
-  margin-bottom: 94px;
-} */
-
-/* !!! HEADER !!! */
-/* logo */
+/* Logo */
 
 .logo {
   font-family: 'Raleway';
@@ -60,6 +57,8 @@ section.features {
   color: var(--light-color);
 }
 
+/* !!! HEADER !!! */
+
 /* Main menu of the website */
 
 .main-menu {
@@ -72,20 +71,14 @@ section.features {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
-}
+  }
 
 .main-menu a {
   text-decoration: none;
   color: var(--second-color);
 }
 
-.main-menu a:hover,
-.main-menu a:focus,
-.main-menu .current {
-  color: var(--logo-hover-focus-color);
-}
-
-/* contacts in header */
+/* Contacts in header */
 
 .contacts-in-header {
   font-style: normal;
@@ -104,56 +97,21 @@ section.features {
   color: var(--main-color);
 }
 
+/* Paddings for all anchors in header except logo */
+header a:not(.logo) {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+/* Hover and focus for anchors in header except logo */
+.main-menu a:hover,
+.main-menu a:focus,
+.main-menu .current,
 .contacts-in-header a:hover,
 .contacts-in-header a:focus {
   color: var(--logo-hover-focus-color);
 }
 
-/* !!! FOOTER !!! */
-
-.footer {
-  background-color: var(--background-hero-and-footer);
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-
-.studia-address {
-  font-size: 14px;
-  font-style: normal;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: var(--light-color);
-  margin-top: 20px;
-  margin-bottom: 9px;
-}
-
-/* Contacts in footer */
-
-.contacts-in-footer {
-  list-style: none;
-  font-size: 14px;
-  font-style: normal;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: var(--contacts-in-footer-color);
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-}
-
-.contacts-in-footer p:hover,
-.contacts-in-footer p:focus {
-  color: var(--logo-hover-focus-color);
-}
-
-.contacts-in-footer li:not(:last-child) {
-  margin-bottom: 9px;
-}
-
-.contacts-in-footer p {
-  margin-top: 0;
-  margin-bottom: 0;
-}
 /* !!! Visually hidden headings !!! */
 .visually-hidden {
   position: absolute;
@@ -260,7 +218,7 @@ section.features {
 }
 
 .what-do-we-do-list > li {
- max-height: 294px;
+  max-height: 294px;
 }
 
 /* Our team section */
@@ -280,7 +238,7 @@ section.features {
 
 .team-member-card img {
   margin-bottom: 30px;
-  }
+}
 
 .team-member-name {
   font-style: normal;
@@ -364,4 +322,50 @@ section.features {
   line-height: 1.875;
   letter-spacing: 0.03em;
   color: var(--main-color);
+}
+
+/* !!! FOOTER !!! */
+
+.footer {
+  background-color: var(--background-hero-and-footer);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.studia-address {
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--light-color);
+  margin-top: 20px;
+  margin-bottom: 9px;
+}
+
+/* Contacts in footer */
+
+.contacts-in-footer {
+  list-style: none;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--contacts-in-footer-color);
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.contacts-in-footer p:hover,
+.contacts-in-footer p:focus {
+  color: var(--logo-hover-focus-color);
+}
+
+.contacts-in-footer li:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.contacts-in-footer p {
+  margin-top: 0;
+  margin-bottom: 0;
 }
