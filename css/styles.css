@@ -8,10 +8,10 @@
   --accent-color: #2196f3;
   --white-color: #ffffff;
   --black-color: #000000;
-    --interactive-contacts-in-footer-color: rgba(255, 255, 255, 0.6);
-   --background-hero-and-footer: #2f303a;
-   --background-color-second: #f5f4fa;
- }
+  --interactive-contacts-in-footer-color: rgba(255, 255, 255, 0.6);
+  --background-hero-and-footer: #2f303a;
+  --background-color-second: #f5f4fa;
+}
 
 /* Global styles reset */
 
@@ -103,7 +103,7 @@ section.features {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--second-color);
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 /* Logo */
@@ -128,6 +128,15 @@ section.features {
 
 /* !!! HEADER !!! */
 
+.nav-header {
+  display: flex;
+}
+
+.logo-and-menu-in-header {
+  display: flex;
+  align-items: center;
+}
+
 /* Main menu */
 
 .main-menu {
@@ -137,10 +146,16 @@ section.features {
   line-height: 1.14;
   letter-spacing: 0.02em;
   list-style: none;
+  display: flex;
+  margin-left: 93px;
+}
+
+.main-menu li:not(:last-child) {
+  margin-right: 50px;
 }
 
 .main-menu a {
-    color: var(--second-color);
+  color: var(--second-color);
 }
 
 /* Contacts in header */
@@ -152,10 +167,16 @@ section.features {
   line-height: 1.14;
   letter-spacing: 0.02em;
   list-style: none;
+  display: flex;
+  margin-left: auto;
+}
+
+.contacts-in-header li:not(:last-child) {
+  margin-right: 50px;
 }
 
 .contacts-in-header a {
-    color: var(--main-color);
+  color: var(--main-color);
 }
 
 /* Paddings for all anchors in header except logo */
@@ -189,6 +210,7 @@ header {
   background-color: var(--background-hero-and-footer);
   padding-top: 200px;
   padding-bottom: 200px;
+  text-align: center;
 }
 
 .hero-heading {
@@ -196,7 +218,6 @@ header {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--white-color);
@@ -210,7 +231,6 @@ header {
   font-style: normal;
   font-size: 16px;
   line-height: 1.875;
-    text-align: center;
   letter-spacing: 0.06em;
   color: var(--white-color);
   background-color: var(--accent-color);
@@ -218,9 +238,19 @@ header {
   border-radius: 4px;
   border: 0;
   padding: 10px 32px;
+  /* margin: 0 auto; */
 }
 
 /* Feature section */
+
+.features-list {
+  display: flex;
+  column-gap: 30px;
+}
+
+.features-list li {
+  width: 270px;
+}
 
 .feature-headings {
   font-style: normal;
@@ -229,14 +259,21 @@ header {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--second-color);
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .feature-description {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  }
+}
+
+/* What do we do section */
+
+.what-do-we-do-list {
+  display: flex;
+  column-gap: 30px;
+}
 
 /* Our team section */
 
@@ -244,10 +281,15 @@ header {
   background-color: var(--background-color-second);
 }
 
+.our-team-list {
+  display: flex;
+  column-gap: 30px;
+}
+
 .team-member-card {
   background-color: var(--white-color);
   box-shadow: 0px 4px 4px 0px hsla(0, 0%, 0%, 0.25);
-  }
+}
 
 .team-member {
   padding: 30px 15px;
@@ -261,7 +303,7 @@ header {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--second-color);
-   margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .team-member-position {
@@ -270,11 +312,16 @@ header {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-color);
- }
+}
 
 /* !!! PORTFOLIO PAGE !!! */
 
 /* Filter */
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+}
 
 .filter-button {
   font-family: inherit;
@@ -304,7 +351,7 @@ header {
 
 .portfolio-card {
   background-color: var(--white-color);
-  border: 1px solid #eeeeee;;
+  border: 1px solid #eeeeee;
 }
 
 .project-name-and-type {
@@ -342,10 +389,10 @@ header {
 
 .postal-address {
   font-size: 14px;
-    line-height: 1.71;
+  line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--white-color);
-  }
+}
 
 /* Email and phone interactive contacts in footer */
 
@@ -356,7 +403,7 @@ header {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--interactive-contacts-in-footer-color);
-  }
+}
 
 .contacts-in-footer a:hover,
 .contacts-in-footer a:focus {
