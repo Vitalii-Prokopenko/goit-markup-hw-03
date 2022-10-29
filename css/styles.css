@@ -1,43 +1,86 @@
-/* Colors */
+/* !!! Global styles !!! */
+
+/* CSS variables */
+
 :root {
   --main-color: #757575;
   --second-color: #212121;
-  --light-color: #ffffff;
-  --dark-color: #000000;
-  --contacts-in-footer-color: rgba(255, 255, 255, 0.6);
-  --logo-hover-focus-color: #2196f3;
-  --background-color-main: #ffffff;
-  --background-color-second: #f5f4fa;
-  --background-color-button-hover-focus: #2196f3;
-  --background-hero-and-footer: #2f303a;
-  --portfolio-card-border-color: #eeeeee;
-  --team-member-card-shadow-color: hsla(0, 0%, 0%, 0.25);
+  --accent-color: #2196f3;
+  --white-color: #ffffff;
+  --black-color: #000000;
+    --interactive-contacts-in-footer-color: rgba(255, 255, 255, 0.6);
+   --background-hero-and-footer: #2f303a;
+   --background-color-second: #f5f4fa;
+ }
+
+/* Global styles reset */
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+  padding-left: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+address {
+  font-style: normal;
+}
+
+img {
+  display: block;
+  max-height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 body {
   font-family: 'Roboto', 'Raleway', sans-serif;
   color: var(--main-color);
-  background-color: var(--background-color-main);
+  background-color: var(--white-color);
 }
+
+/* Container */
 
 .container {
   width: 1200px;
   margin: 0 auto;
-  padding-left: 15px;
+  padding: 0 15px;
 }
 
 /* Paddings for all sections except Hero */
+
 section:not(.hero) {
   padding-bottom: 94px;
   padding-top: 94px;
 }
 
 /* Zero bottom padding for feature section - overflows previous padding */
+
 section.features {
   padding-bottom: 0;
 }
 
-/* !!! Visually hidden headings !!! */
+/* Visually hidden headings */
+
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -51,6 +94,18 @@ section.features {
   margin: -1px;
 }
 
+/* Visually observed headings */
+
+.visually-observed {
+  font-style: normal;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--second-color);
+    margin-bottom: 50px;
+}
+
 /* Logo */
 
 .logo {
@@ -60,20 +115,20 @@ section.features {
   line-height: 1.19;
   letter-spacing: 0.03em;
   text-decoration: none;
-  color: var(--logo-hover-focus-color);
+  color: var(--accent-color);
 }
 
 .colored-part-of-logo-in-header {
-  color: var(--dark-color);
+  color: var(--black-color);
 }
 
 .colored-part-of-logo-in-footer {
-  color: var(--light-color);
+  color: var(--white-color);
 }
 
 /* !!! HEADER !!! */
 
-/* Main menu of the website */
+/* Main menu */
 
 .main-menu {
   font-style: normal;
@@ -82,14 +137,10 @@ section.features {
   line-height: 1.14;
   letter-spacing: 0.02em;
   list-style: none;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-  }
+}
 
 .main-menu a {
-  text-decoration: none;
-  color: var(--second-color);
+    color: var(--second-color);
 }
 
 /* Contacts in header */
@@ -101,45 +152,44 @@ section.features {
   line-height: 1.14;
   letter-spacing: 0.02em;
   list-style: none;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
 }
 
 .contacts-in-header a {
-  text-decoration: none;
-  color: var(--main-color);
+    color: var(--main-color);
 }
 
 /* Paddings for all anchors in header except logo */
+
 header a:not(.logo) {
   padding-top: 32px;
   padding-bottom: 32px;
 }
 
 /* Hover and focus for anchors in header except logo */
+
 .main-menu a:hover,
 .main-menu a:focus,
 .main-menu .current,
 .contacts-in-header a:hover,
 .contacts-in-header a:focus {
-  color: var(--logo-hover-focus-color);
+  color: var(--accent-color);
 }
 
 /* Line border */
 
 header {
-  border: 1px solid #ECECEC;
+  border-bottom: 1px solid #ececec;
 }
 
 /* !!! MAIN PAGE !!! */
+
 /* Hero section*/
 
 .hero {
   background-color: var(--background-hero-and-footer);
   padding-top: 200px;
   padding-bottom: 200px;
-  }
+}
 
 .hero-heading {
   font-style: normal;
@@ -149,8 +199,7 @@ header {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--light-color);
-  margin-top: 0;
+  color: var(--white-color);
   margin-bottom: 30px;
 }
 
@@ -161,25 +210,17 @@ header {
   font-style: normal;
   font-size: 16px;
   line-height: 1.875;
-  cursor: pointer;
     text-align: center;
   letter-spacing: 0.06em;
-  color: var(--light-color);
-  background-color: var(--background-color-button-hover-focus);
-  box-shadow: 0px 4px 4px var(--team-member-card-shadow-color);
+  color: var(--white-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px hsla(0, 0%, 0%, 0.25);
   border-radius: 4px;
   border: 0;
   padding: 10px 32px;
 }
 
 /* Feature section */
-
-.features-list {
-  list-style: none;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
- }
 
 .feature-headings {
   font-style: normal;
@@ -188,61 +229,28 @@ header {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--second-color);
-  margin-top: 0;
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .feature-description {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-/* Observed section headings */
-
-.what-do-we-do-heading,
-.our-team-heading {
-  font-style: normal;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--second-color);
-  margin-top: 0;
-  margin-bottom: 50px;
-}
-
-/* What do we do section */
-
-.what-do-we-do-list,
-.our-team-list {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-/* 
-.what-do-we-do-list > li {
-  max-height: 294px;
-} */
+  }
 
 /* Our team section */
 
 .our-team {
   background-color: var(--background-color-second);
-  }
-
-.team-member-card {
-  background-color: var(--background-color-main);
-  box-shadow: 0px 4px 4px 0px hsla(0, 0%, 0%, 0.25);
-    max-height: 368px;
 }
 
+.team-member-card {
+  background-color: var(--white-color);
+  box-shadow: 0px 4px 4px 0px hsla(0, 0%, 0%, 0.25);
+  }
+
 .team-member {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 30px 15px;
 }
 
 .team-member-name {
@@ -253,8 +261,7 @@ header {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--second-color);
-  margin-top: 0;
-  margin-bottom: 10px;
+   margin-bottom: 10px;
 }
 
 .team-member-position {
@@ -263,22 +270,13 @@ header {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-color);
-  margin-top: 0;
-  margin-bottom: 0;
-}
+ }
 
 /* !!! PORTFOLIO PAGE !!! */
+
 /* Filter */
 
-.filter-buttons {
-  list-style: none;
-}
-
 .filter-button {
-  padding-left: 22px;
-  padding-right: 22px;
-  padding-top: 6px;
-  padding-bottom: 6px;
   font-family: inherit;
   font-style: normal;
   font-size: 16px;
@@ -290,28 +288,27 @@ header {
   background-color: var(--background-color-second);
   border: none;
   border-radius: 4px;
-  cursor: pointer;
+  padding: 6px 22px;
 }
 
 .filter-button:hover,
 .filter-button:focus {
-  color: var(--light-color);
-  background-color: var(--background-color-button-hover-focus);
+  color: var(--white-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 
 /* Portfolio cards */
 
-.portfolio-cards {
-  list-style: none;
-}
-
 .portfolio-card {
-  background-color: var(--background-color-main);
-  border: 1px solid var(--portfolio-card-border-color);
+  background-color: var(--white-color);
+  border: 1px solid #eeeeee;;
 }
 
-.portfolio-card-link {
-  text-decoration: none;
+.project-name-and-type {
+  padding: 20px 24px;
 }
 
 .portfolio-card-heading {
@@ -320,6 +317,7 @@ header {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--second-color);
+  margin-bottom: 4px;
 }
 
 .portfolio-card-project-type {
@@ -333,44 +331,38 @@ header {
 
 .footer {
   background-color: var(--background-hero-and-footer);
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding: 60px 0;
 }
 
-.studia-address {
+.footer .logo {
+  margin-bottom: 20px;
+}
+
+/* Postal address not interactive contact in footer */
+
+.postal-address {
   font-size: 14px;
-  font-style: normal;
-  line-height: 1.71;
+    line-height: 1.71;
   letter-spacing: 0.03em;
-  color: var(--light-color);
-  margin-top: 20px;
-  margin-bottom: 9px;
-}
+  color: var(--white-color);
+  }
 
-/* Contacts in footer */
+/* Email and phone interactive contacts in footer */
 
-.contacts-in-footer {
+.contacts-in-footer a {
   list-style: none;
   font-size: 14px;
   font-style: normal;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: var(--contacts-in-footer-color);
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-}
+  color: var(--interactive-contacts-in-footer-color);
+  }
 
-.contacts-in-footer p:hover,
-.contacts-in-footer p:focus {
-  color: var(--logo-hover-focus-color);
+.contacts-in-footer a:hover,
+.contacts-in-footer a:focus {
+  color: var(--accent-color);
 }
 
 .contacts-in-footer li:not(:last-child) {
   margin-bottom: 9px;
-}
-
-.contacts-in-footer p {
-  margin-top: 0;
-  margin-bottom: 0;
 }
