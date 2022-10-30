@@ -27,9 +27,9 @@ h6 {
 }
 
 ul {
+  list-style: none;
   margin-top: 0;
   margin-bottom: 0;
-  list-style: none;
   padding-left: 0;
 }
 
@@ -47,9 +47,10 @@ img {
 }
 
 a {
+  display: block;
+
   text-decoration: none;
   color: inherit;
-  display: block;
 }
 
 body {
@@ -97,13 +98,14 @@ section.features {
 /* Visually observed headings */
 
 .visually-observed {
+  margin-bottom: 50px;
+
   font-style: normal;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--second-color);
-  margin-bottom: 50px;
 }
 
 /* Logo */
@@ -140,15 +142,16 @@ section.features {
 /* Main menu */
 
 .main-menu {
+  display: flex;
+  margin-left: 93px;
+  
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   list-style: none;
-  display: flex;
-  margin-left: 93px;
-}
+  }
 
 .main-menu li:not(:last-child) {
   margin-right: 50px;
@@ -161,15 +164,16 @@ section.features {
 /* Contacts in header */
 
 .contacts-in-header {
+  display: flex;
+  margin-left: auto;
+  
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   list-style: none;
-  display: flex;
-  margin-left: auto;
-}
+  }
 
 .contacts-in-header li:not(:last-child) {
   margin-right: 50px;
@@ -214,6 +218,8 @@ header {
 }
 
 .hero-heading {
+  margin-bottom: 30px;
+  
   font-style: normal;
   font-weight: 900;
   font-size: 44px;
@@ -221,12 +227,13 @@ header {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--white-color);
-  margin-bottom: 30px;
-}
+  }
 
 /* Button Order service */
 
 .order-button {
+padding: 10px 32px;
+
   font-family: inherit;
   font-style: normal;
   font-size: 16px;
@@ -237,29 +244,33 @@ header {
   box-shadow: 0px 4px 4px hsla(0, 0%, 0%, 0.25);
   border-radius: 4px;
   border: 0;
-  padding: 10px 32px;
-  /* margin: 0 auto; */
-}
+  }
 
 /* Feature section */
 
 .features-list {
   display: flex;
-  column-gap: 30px;
 }
 
 .features-list li {
-  width: 270px;
+  margin-right: 30px;
+    width: 270px;
+}
+
+.features-list li:last-child {
+  margin-right: 0;
 }
 
 .feature-headings {
+  margin-bottom: 10px;
+
   font-style: normal;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--second-color);
-  margin-bottom: 10px;
+  
 }
 
 .feature-description {
@@ -272,7 +283,14 @@ header {
 
 .what-do-we-do-list {
   display: flex;
-  column-gap: 30px;
+}
+
+.what-do-we-do-list li {
+  margin-right: 30px;
+}
+
+.what-do-we-do-list li:last-child {
+  margin-right: 0;
 }
 
 /* Our team section */
@@ -283,12 +301,17 @@ header {
 
 .our-team-list {
   display: flex;
-  column-gap: 30px;
 }
 
 .team-member-card {
+  margin-right: 30px;
+
   background-color: var(--white-color);
   box-shadow: 0px 4px 4px 0px hsla(0, 0%, 0%, 0.25);
+}
+
+.team-member-card:last-child {
+  margin-right: 0;
 }
 
 .team-member {
@@ -296,6 +319,8 @@ header {
 }
 
 .team-member-name {
+  margin-bottom: 10px;
+
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -303,8 +328,7 @@ header {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--second-color);
-  margin-bottom: 10px;
-}
+  }
 
 .team-member-position {
   font-size: 16px;
@@ -321,21 +345,31 @@ header {
 .filter-buttons {
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
 }
 
 .filter-button {
-  font-family: inherit;
+  display: block;
+    padding: 6px 22px;
+  
+    font-family: inherit;
   font-style: normal;
   font-size: 16px;
   line-height: 1.875;
-  align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
   color: var(--second-color);
   background-color: var(--background-color-second);
   border: none;
   border-radius: 4px;
-  padding: 6px 22px;
+}
+
+.filter-buttons li {
+  margin-right: 8px;
+}
+
+.filter-buttons li:last-child {
+  margin-right: 0;
 }
 
 .filter-button:hover,
@@ -349,23 +383,36 @@ header {
 
 /* Portfolio cards */
 
+.portfolio-cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
 .portfolio-card {
+   margin: 15px;
+
   background-color: var(--white-color);
-  border: 1px solid #eeeeee;
+ 
 }
 
 .project-name-and-type {
   padding: 20px 24px;
+
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
 }
 
 .portfolio-card-heading {
+  margin-bottom: 4px;
+
   font-style: normal;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--second-color);
-  margin-bottom: 4px;
-}
+  }
 
 .portfolio-card-project-type {
   font-size: 16px;
@@ -377,9 +424,10 @@ header {
 /* !!! FOOTER !!! */
 
 .footer {
+padding: 60px 0;
+
   background-color: var(--background-hero-and-footer);
-  padding: 60px 0;
-}
+  }
 
 .footer .logo {
   margin-bottom: 20px;
